@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">GithubBrowser</string>
+
+    <string name="search_instructions">Please enter your search in the field above.</string>
+    <string name="no_results">Your search did not find any results. Please try a different search.</string>
+
+    <string name="size">Size</string>
+    <string name="forks">Forks</string>
+    <string name="issues">Open Issues</string>
+    <string name="stars">Stars</string>
+    <string name="updated">Last Updated</string>
+
+    <string name="view_external">View In Browser</string>
+    <string name="view_internal">View In App</string>
+    <string name="close">Close</string>
+
+    <string name="view_repo_source">View Repository Source</string>
+    <string name="repo_stats">Repository Stats</string>
+    <string name="repo_url_missing">Repository Homepage URL is missing</string>
+
+    <string name="url">URL</string>
+
+
+    <string name="fa_star">&#xf005;</string>
+    <string name="fa_info_circle">&#xf05a;</string>
+    <string name="fa_fork">&#xf126;</string>
+    <string name="fa_calendar">&#xf073;</string>
+    <string name="fa_file">&#xf15b;</string>
+    <string name="fa_globe">&#xf0ac;</string>
+
+</resources>

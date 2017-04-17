@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="results_padding">40dp</dimen>
+    <dimen name="resultslist_margin">40dp</dimen>
+    <dimen name="detail_avatar_size">60dp</dimen>
+</resources>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:padding="@dimen/results_padding">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    style="@style/Detail.Avatar"
+                    android:layout_width="@dimen/detail_avatar_size"
+                    android:layout_height="@dimen/detail_avatar_size"
+                    android:src="@drawable/default_avatar" />
+
+                <TextView
+                    android:id="@+id/repoName"
+                    style="@style/Detail.RepoName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/avatar"
+                    android:text="Repo Name" />
+
+
+                <TextView
+                    android:id="@+id/repoDescription"
+                    style="@style/Detail.RepoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/repoName"
+                    android:layout_below="@+id/repoName"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel odio urna. Integer non sodales augue. Nam nec scelerisque ipsum. " />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+
+                style="@style/Detail.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_repo_source" />
+
+            <LinearLayout
+                style="@style/Detail.Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.mjohnston.githubbrowser.view.FontAwesomeTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fa_globe"
+                        style="@style/Detail.ListIcon"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/url"
+                        style="@style/Detail.ListLabel"
+                        />
+
+                    <TextView
+                        android:id="@+id/repoLink"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="http://github.com"
+                        style="@style/Detail.ListValue"
+                        />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/externalLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/view_external"
+                        style="@style/Button"
+                        />
+
+                    <Button
+                        android:id="@+id/internalLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/view_internal"
+                        style="@style/Button"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+
+                style="@style/Detail.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/repo_stats" />
+
+            <TableLayout
+                style="@style/Detail.Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mjohnston.githubbrowser.view.FontAwesomeTextView
+                        android:text="@string/fa_info_circle"
+                        style="@style/Detail.ListIcon"
+                        />
+
+                    <TextView
+                        android:text="@string/issues"
+                        style="@style/Detail.ListLabel"
+                        />
+
+                    <TextView
+                        android:id="@+id/repoIssues"
+                        android:text="0"
+                        style="@style/Detail.ListValue"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mjohnston.githubbrowser.view.FontAwesomeTextView
+                        android:text="@string/fa_fork"
+                        style="@style/Detail.ListIcon"
+                        />
+
+                    <TextView
+                        android:text="@string/forks"
+                        style="@style/Detail.ListLabel"
+                        />
+
+                    <TextView
+                        android:id="@+id/repoForks"
+                        android:text="0"
+                        style="@style/Detail.ListValue"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mjohnston.githubbrowser.view.FontAwesomeTextView
+                        android:text="@string/fa_star"
+                        style="@style/Detail.ListIcon"
+                        />
+
+                    <TextView
+                        android:text="@string/stars"
+                        style="@style/Detail.ListLabel"
+                        />
+
+                    <TextView
+                        android:id="@+id/repoStars"
+                        android:text="0"
+                        style="@style/Detail.ListValue"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mjohnston.githubbrowser.view.FontAwesomeTextView
+                        android:text="@string/fa_file"
+                        style="@style/Detail.ListIcon"
+                        />
+
+                    <TextView
+                        android:text="@string/size"
+                        style="@style/Detail.ListLabel"
+                        />
+
+                    <TextView
+                        android:id="@+id/repoSize"
+                        android:text="0"
+                        style="@style/Detail.ListValue"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.mjohnston.githubbrowser.view.FontAwesomeTextView
+                        android:text="@string/fa_calendar"
+                        style="@style/Detail.ListIcon"
+                        />
+
+                    <TextView
+                        android:text="@string/updated"
+                        style="@style/Detail.ListLabel"
+                        />
+
+                    <TextView
+                        android:id="@+id/repoUpdated"
+                        android:text=""
+                        style="@style/Detail.ListValue"
+                        />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
